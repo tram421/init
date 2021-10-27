@@ -1,0 +1,25 @@
+footer {
+    min-height: 246px;
+    background-color: $background-color-footer;
+    .footer__item {
+        color: $text-color-gray;
+        li {
+            list-style: none;
+            border-bottom: 1px solid rgba(255,255,255,.1);
+        }
+        a {
+            display: block;
+            line-height: 2rem;
+            color: $text-color-gray;
+        }
+        img {
+            width: 100%;
+        }
+        h3 {
+            color: white;
+        }
+        .footer__social {
+            color: $text-color-highlight;
+        }
+    }
+}

@@ -1,0 +1,94 @@
+/* 739px  */
+@media (max-width: 46.1875em) {
+
+    #top {
+        .top__content {
+            top: 50%;
+            transform: translateY(-50%);
+            h3, p {
+                display: none;
+            }
+            button {
+                padding: 15px 10px;
+            }
+        }
+    }
+    .category {
+        height: fit-content;
+        .category__list {
+            flex-direction: column;
+            height: fit-content;
+            padding: 0 20px;
+            .category__item {
+                height: 43px;
+                line-height: 43px;
+                align-self: flex-end;
+                padding-top: 0;
+                margin-top: 0;
+                text-align: left;
+                a {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+        .category__item {
+            width: 100%;
+            border-top:none;
+            border-left: 5px solid black;
+            &::before {
+                border: none;
+            }
+        }
+    }
+}
+
+/* Tablet - PC low resolution */
+// (min-width: 740px) and (max-width: 1023px)
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+    #top {
+        overflow: hidden;
+        .top__content {
+            top: 0px;
+            transform: translateY(30px);
+            p {
+                max-width: 90%;
+            }
+        }
+    }
+}
+/* Nhỏ hơn tablet 1023px */
+@media (max-width: 63.9375em) {
+    /* header */
+    .nav {
+        position: relative;
+        padding: 0 10px;
+        .nav__list {
+            display: none;
+            height: fit-content;
+
+            z-index: 3;
+            background-color: $background-color-footer;
+            .nav__item {
+                width: 100%;
+                a {
+                    color: $text-white;
+                    text-align: left;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+        #nav__mobile {
+            display: block;
+            line-height: $height-nav;
+            font-size: 3.2rem;
+            width: 100%;
+        }
+        .open-at {
+            position: absolute;
+            top: 0px;
+            right: 20px;
+
+        }
+    }
+}

@@ -1,0 +1,166 @@
+
+@use "sass:math";
+// Global variables
+$columns : 12;
+
+// Function
+@mixin col-dimension($param) {
+    flex: 0 0 percentage(math.div($param,12));
+    max-width: percentage(math.div($param,12));
+}
+
+.grid {
+    width: 100%;
+    display: block;
+    padding: 0;
+}
+
+.grid.wide {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -4px;
+    margin-right: -4px;
+    flex-direction: row;
+    &.no-gutters {
+        margin-left: 0;
+        margin-right: 0;
+        .col {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    } 
+}
+.col {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.col-0 {
+    display: none;
+}
+
+@for $i from 1 through $columns {
+    .col-#{$i} {
+        @include col-dimension($i);
+    }
+    .col-o-#{$i} {
+        margin-left: percentage(math.div($i, 12));
+    }
+    
+}
+
+// Responsive
+// 740px
+@media (min-width: 46.25em) {
+    .row {
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+    .col {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .col-md-0 {
+        display: none;
+    }    
+    @for $i from 1 through $columns {
+        .col-md-#{$i} {
+            @include col-dimension($i);
+        } 
+        .col-md-o-#{$i} {
+            margin-left: percentage(math.div($i, 12));
+        }   
+    }
+
+}
+// min-width: 1113px
+@media (min-width: 69.5625em) {
+    .row {
+        margin-left: -12px;
+        margin-right: -12px;
+        &.sm-gutter {
+            margin-left: -5px;
+            margin-right: -5px;
+            .col {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+        }
+    }
+    .col {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .col-lg-0 {
+        display: none;
+    }
+    @for $i from 1 through $columns {
+        .col-lg-#{$i} {
+            display: block;
+            @include col-dimension($i);
+        }
+        .col-lg-o-#{$i} {
+            margin-left: percentage(math.div($i, 12));
+        }
+    }
+    .col-lg-2-4 {
+        display: block;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+   
+}
+
+/* Tablet - PC low resolution */
+// (min-width: 740px) and (max-width: 1023px)
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+    .wide {
+        width: 644px;
+    }
+}
+/* > PC low resolution */
+//(min-width: 1024px) and (max-width: 1239px)
+@media (min-width: 64em) and (max-width: 77.4375em) {
+    .wide {
+        width: 984px;
+        .row {
+            margin-left: -12px;
+            margin-right: -12px;
+            &.smd-gutter {
+                margin-left: -5px;
+                margin-right: -5px;
+                .col {
+                    padding-left: 5px;
+                    padding-right: 5px;
+                }
+            }
+        }
+        .col {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+    }
+    .wide .col-lg-0 {
+        display: none;
+    }
+    @for $i from 1 through $columns {
+        .wide .col-lg-#{$i} {
+            display: block;
+            @include col-dimension($i);
+        }
+        .wide .col-lg-o-#{$i} {
+            margin-left: percentage(math.div($i, 12));
+        }
+    }
+    .wide .lg-2-4 {
+        flex: 0 0 20%;
+        max-width: 20%; 
+        display: block;
+    }
+}

@@ -1,0 +1,28 @@
+#top {
+    position: relative;
+    img {
+        height: auto;
+        width: 100%;
+        overflow: hidden;
+    }
+    .top__content {    
+        position: absolute;
+        top: 50%;
+        display: flex;
+        flex-direction: column;
+        transform: translateY(-50%);    
+        h3 {
+            text-transform: uppercase;
+            font-size: 1.6rem;
+            margin: 16px 0px;
+        }
+        p {
+            max-width: 70%;
+            line-height: 1.5;
+            font-size: 1.6rem;
+        }
+        button {
+            background-color: $higtlight-color-orange;
+        }
+    }
+}

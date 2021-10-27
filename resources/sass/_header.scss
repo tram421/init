@@ -1,0 +1,102 @@
+/*Header*/
+header {
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0,0,0,.2);
+    background-color: $background-color-dark;
+    height: $height-header;
+    .container {
+        justify-content: space-between;
+    }
+    .header__left {
+        font-weight: 400;
+        line-height: $height-header;
+        max-height: $height-header;
+        a {
+            font-size: 2.6rem;
+            color: $text-color-highlight;
+        }
+    }
+
+    .header__right {
+        color: $text-color-gray;
+        display: flex;
+        align-items: center;
+        span {
+            box-sizing: border-box;
+            line-height: $height-header;
+            margin: 0 23px;
+            &:hover {
+                color: $text-white;
+                cursor: pointer;
+            }
+        }
+        a {
+            display: block;
+            top: 0;
+            bottom: 0;
+            padding: 0 17px;
+            color: $text-color-gray;
+            align-self: center;
+            border: 1px solid rgba(115, 165, 180, 0.1);
+            border-bottom: none;
+            border-top: none;
+            line-height: $height-header;
+            &:hover {
+                color: $text-white;
+                background-color: $background-color-footer;
+            }
+        }
+    }
+}
+
+
+/* Nav bar */
+.nav {
+   width: 100%;
+   justify-content: space-between;
+   height: $height-nav;
+   background-color: white;
+   .nav__list {
+       display: flex;
+       height: $height-nav;
+       padding: 0;
+       margin: 0;
+       flex-wrap: wrap;
+        .nav__item {
+            float: left;
+            list-style: none;
+            a {
+                display: block;
+                width: 100%;
+                line-height: $height-nav;
+                padding: 0 20px;
+                font-size: 1.6rem;
+                text-align: center;
+                border-right: 1px solid rgb(204, 204, 204);
+                border-top: none;
+                border-bottom: none;
+                color: $text-color-highlight;
+            }
+            &:first-child{
+                border-left: 1px solid rgb(204, 204, 204);
+            }
+            &:hover {
+                background-color: $background-color-dark;
+            }
+        }
+   }
+   .open-at {
+       display: flex;
+       flex: 1;
+       justify-content: end;
+         span {
+            line-height: $height-nav;
+            display: inline-block;
+            color: $text-color-gray;
+        }
+   }
+   #nav__mobile {
+       display: none;
+   }
+}
+

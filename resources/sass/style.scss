@@ -1,0 +1,22 @@
+
+@import "./_variable.scss";
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Quicksand', sans-serif;
+}
+* {
+    font-size: 1.6rem;
+}
+.bg-gray {
+    background-color: $background-gray;
+}
+@import "./_header.scss";
+@import './top.scss';
+@import './category';
+@import './products';
+@import './info';
+@import './footer';
+
+@import "./responsive.scss";
+

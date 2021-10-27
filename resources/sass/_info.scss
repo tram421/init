@@ -1,0 +1,25 @@
+.info {
+    background-color: #ebe7df;
+    .info__contact {        
+        h2 {
+            border-bottom: 1px solid rgb(255, 255, 255);
+        }
+    }
+    .info__item {
+        height: 100%;
+        
+    }
+    .info__item__inner {
+        display: flex;
+        align-content: center;
+        border-bottom: 1px solid rgb(165, 165, 165);
+        padding: 8px 0px;
+        h4 {
+            background-color: $higtlight-color-orange;
+            min-width: 110px;
+            align-self: center;
+            border-radius: 4px;
+            text-align: center;
+        }    
+    }
+}
