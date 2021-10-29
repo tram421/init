@@ -62,13 +62,13 @@
                     <div id="thumb" class='mt-3'>
 
                         <img class="m-2 mt-3" style="width : 200px"
-                             src="@if(isset($data->image) && $data->image != 'no-image'){{$data->image}}@else /img/no-image-top.jpg @endif"
+                             src="@if(isset($data->image) && $data->image != 'no-image'){{$data->image}}@else /img/no-image-product.jpg @endif"
                              alt="top-image"
                         >
 
                     </div>
                     <input type="hidden" name="image" id="url_file"
-                           value="@if(isset($data->image) && $data->image != 'no-image'){{$data->image}}@else/img/no-image-top.jpg @endif">
+                           value="@if(isset($data->image) && $data->image != 'no-image'){{$data->image}}@else/img/no-image-product.jpg @endif">
                 </div>
             </div>
             <div class="row">

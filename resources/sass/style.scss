@@ -4,12 +4,16 @@ html {
     font-size: 62.5%;
     line-height: 1.6rem;
     font-family: 'Quicksand', sans-serif;
+    scroll-behavior: smooth;
 }
 * {
     font-size: 1.6rem;
 }
 .bg-gray {
     background-color: $background-gray;
+}
+.cursor-pointer {
+    cursor: pointer;
 }
 @import "./_header.scss";
 @import './top.scss';

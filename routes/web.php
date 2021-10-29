@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\MainController;
 
-
+use App\Http\Controllers\ProductsController;
 
 //public
 Route::get('/', [MainController::class, 'index']);
 
-
+Route::get('product-detail/{id}', [ProductsController::class, 'show']);

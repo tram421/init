@@ -19,16 +19,20 @@ use App\Http\Service\AdminGeneralService;
 
 use League\Flysystem\Config;
 use function MongoDB\BSON\toJSON;
+use App\Http\Service\ProductsService;
 
 class ProductController extends Controller
 {
     private $model;
     private $adminGeneralService;
 
+    private $productsService;
+
     public function __construct()
     {
         $this->model = new Products();
         $this->adminGeneralService = new AdminGeneralService($this->model);
+        $this->productsService = new ProductsService();
     }
 
     /**
@@ -50,9 +54,11 @@ class ProductController extends Controller
         $data = Session::get('data');
         # Xoá lỗi mỗi khi nhấn link
         Session::pull('error');
+        $category = $this->productsService->getCategory();
         return view('admin.product.add', [
             'title' => 'Thêm sản phẩm',
-            'data' => $data
+            'data' => $data,
+            'categories' => $category
         ]);
     }
 

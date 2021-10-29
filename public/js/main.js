@@ -161,18 +161,18 @@ var $$ = document.querySelectorAll.bind(document);
           _iterator3.f();
         }
       };
-    } // imgProduct.onmouseover = function() {
-    //     buttonViewProduct.classList.add('show');        
-    // }
-    // imgProduct.onmouseout = function() {
-    //     buttonViewProduct.classList.remove('show');        
-    // }
-
+    }
   } catch (err) {
     _iterator.e(err);
   } finally {
     _iterator.f();
   }
+}
+{
+  direct = function direct() {
+    var str = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+    location.replace(str);
+  };
 }
 
 /***/ }),

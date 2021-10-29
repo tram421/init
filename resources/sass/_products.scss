@@ -1,6 +1,6 @@
-.products-new {
+.products-new, .products-feature {
     display: block;
-    background-color: #ebe7df;    
+    background-color: #ebe7df;
     border-bottom: 1px solid rgb(58, 58, 58);
     h3 {
         text-transform: uppercase;
@@ -9,15 +9,19 @@
         background-color: white;
         position: relative;
         border-radius: 5px;
+        margin: 8px 0;
+        display: block;
         img {
             width: 100%;
         }
         .name {
             text-align: center;
-            margin: 8px 0;
+            margin: 0px 0;
             padding: 16px 0;
             font-weight: 700;
             text-transform: uppercase;
+            background-color: $background-color-press;
+            color: white;
         }
         button {
             display: none;
@@ -28,7 +32,33 @@
         }
     }
 }
-.price {
-    background-color: $text-color-highlight;
-    color: white
+.product__description {
+    .price {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        min-height: 25.3px;
+        .cost {
+            font-weight: bold;
+        }
+        .sale {
+            color: darkred;
+            font-size: 2.2rem;
+            font-weight: bold;
+        }
+        span {
+
+        }
+    }
+
 }
+.range-price {
+    background-color: $text-color-highlight;
+    color: white;
+    min-height: 50.4px;
+}
+.all-products {
+    text-align: right;
+    display: block;
+}
+

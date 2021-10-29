@@ -4,7 +4,7 @@
     @include('head')
 </head>
 <body>
-<header id="header">
+<header id="header top">
     <div class="grid wide">
         <div class="row container no-gutters">
             <div class="header__left">
@@ -97,12 +97,22 @@
         </div>
     </div>
 </div>
-<div class="products-new m-0 pb-8">
+<div class="products-feature m-0 pb-8">
     <div class="grid wide pt-16">
         <h3 class="fs-20 mb-16">Sản phẩm nổi bật</h3>
         <div class="row">
             @include('products-feature')
         </div>
+        <a class="all-products" href="">Tất cả sản phẩm <i class="fas fa-arrow-right"></i></a>
+    </div>
+</div>
+<div class="products-new m-0 pb-8">
+    <div class="grid wide pt-16">
+        <h3 class="fs-20 mb-16">Sản phẩm Mới</h3>
+        <div class="row">
+            @include('products-new')
+        </div>
+        <a class="all-products" href="">Tất cả sản phẩm <i class="fas fa-arrow-right"></i></a>
     </div>
 </div>
 
@@ -111,7 +121,7 @@
         <div class="row container">
             <div class="col col-lg-3 col-md-6 col-12 mb-8">
                 <div class="info__ship bg-gray info__item p-16">
-                    <h2>Hướng dẫn giao hàng</h2>
+                    <h2>Hướng dẫn</h2>
                     @if($infoShop){{$infoShop->short_description}}@endif
                 </div>
             </div>

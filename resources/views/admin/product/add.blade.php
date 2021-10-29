@@ -12,7 +12,7 @@
         <div class="card-body">
 
             <div class="row">
-                <div class="col col-12 col-lg-6 col-md-6">
+                <div class="col col-12 col-lg-5 col-md-5">
                     <div class="form-group">
                         <label for="">Tên Sản phẩm</label>
                         <input type="text" name="name" id="name" class="form-control" placeholder="Nhập Tên"
@@ -20,7 +20,24 @@
                                onblur="addSlug()">
                     </div>
                 </div>
-                <div class="col col-12 col-lg-6 col-md-6">
+                <div class="col col-12 col-lg-2 col-md-2">
+                    <div class="form-group">
+
+                        <div class="form-group">
+                            <label for="">Danh Mục</label>
+                            <select name="category" class="form-select">
+                                @if(isset($categories))
+                                    @foreach($categories as $category)
+                                        <option value = '{{$category->id}}'>{{$category->name}} </option>;
+                                    @endforeach
+                                @endif
+                            </select>
+                        </div>
+{{--                        <input type="text" name="category" class="form-control"--}}
+{{--                               value='@if(isset($data['category'])){{$data['category']}}@endif' >--}}
+                    </div>
+                </div>
+                <div class="col col-12 col-lg-5 col-md-5">
                     <div class="form-group">
                         <label for="">Slug</label>
                         <input type="text" name="slug" class="form-control"
@@ -69,13 +86,13 @@
                     <div id="thumb" class='mt-3'>
 
                         <img class="m-2 mt-3" style="width : 200px"
-                             src="@if(isset($data['image']) && $data['image'] != 'no-image'){{$data['image']}}@else /img/no-image-top.jpg @endif"
+                             src="@if(isset($data['image']) && $data['image'] != 'no-image'){{$data['image']}}@else /img/no-image-product.jpg @endif"
                              alt="top-image"
                         >
 
                     </div>
                     <input type="hidden" name="image" id="url_file"
-                           value="@if(isset($data['image']) && $data['image'] != 'no-image'){{$data['image']}}@else/img/no-image-top.jpg @endif">
+                           value="@if(isset($data['image']) && $data['image'] != 'no-image'){{$data['image']}}@else/img/no-image-product.jpg @endif">
                 </div>
             </div>
             <div class="row">
@@ -115,7 +132,7 @@
         </div>
 
         <div class="card-footer">
-            <button type="submit" class="btn btn-primary">Thêm trang</button>
+            <button type="submit" class="btn btn-primary">Thêm sản phẩm</button>
         </div>
     </form>
 

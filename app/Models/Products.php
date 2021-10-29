@@ -19,6 +19,7 @@ class Products extends Model
         'active',
         'specification',
         'min_range',
-        'max_range'
+        'max_range',
+        'category'
     ];
 }

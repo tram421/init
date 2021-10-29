@@ -7,13 +7,13 @@
     <form method="POST">
         <div class="card-body">
             <div class="row">
-                <div class="col col-md-6 con-xs-12 col-lg-6">
+                <div class="col col-md-6 con-xs-12 col-lg-6 border-right border-3">
                     <div class="form-group">
                         <label for="name">Tên cửa hàng</label>
                         <input type="text" class="form-control" id="name" value="@if($data){{$data->name}}@endif" name="name">
                     </div>
                     <div class="form-group">
-                        <label for="hotline">Hotline</label>
+                        <label for="hotline">Di động: </label>
                         <input type="text" class="form-control" id="hotline" placeholder="Hotline" value="@if($data){{$data->hotline}}@endif" name="hotline">
                     </div>
                     <div class="form-group">
@@ -21,8 +21,12 @@
                         <textarea type="text" class="form-control" name="address">@if($data){{$data->address}}@endif</textarea>
                     </div>
                     <div class="form-group">
-                        <label for="hotline">Điện thoại</label>
+                        <label for="hotline">Điện thoại bàn:</label>
                         <input type="number" class="form-control" id="hotline" placeholder="tel" value="@if($data){{$data->phone}}@endif" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label>Giới thiệu ngắn</label>
+                        <textarea type="text" class="form-control" id="short-about" name="short_description">@if($data){{$data->short_description}}@endif</textarea>
                     </div>
 
                 </div>
@@ -32,8 +36,12 @@
                         <input type="number" class="form-control" id="hotline" placeholder="zalo" value="@if($data){{$data->zalo}}@endif" name="zalo">
                     </div>
                     <div class="form-group">
-                        <label>Giới thiệu ngắn</label>
-                        <textarea type="text" class="form-control" id="short-about" name="short_description">@if($data){{$data->short_description}}@endif</textarea>
+                        <label for="hotline">Social</label>
+                        <input type="text" class="form-control" id="hotline" placeholder="Mạng xã hội" value="@if($data){{$data->social}}@endif" name="social">
+                    </div>
+                    <div class="form-group">
+                        <label for="hotline">Email liên hệ</label>
+                        <input type="email" class="form-control" id="hotline" placeholder="Email để khách hàng liên hệ" value="@if($data){{$data->email_contact}}@endif" name="email_contact">
                     </div>
                     <div class="form-group">
                         <label for="hotline">Giờ làm việc</label>

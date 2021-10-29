@@ -27,3 +27,7 @@ function readNum($num = 0)
     $text .= fmod($num, 1000) . ' đồng.';
     return $text;
 }
+function numFormatVn($num):string
+{
+    return number_format($num, 0, '.', ',');
+}

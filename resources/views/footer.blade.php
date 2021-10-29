@@ -1,4 +1,8 @@
+<?php
+//dd($productsFeature);
+?>
 <footer>
+    <a class="top" href="#top"><i class="fas fa-arrow-up"></i></a>
     <div class="grid wide">
         <div class="row">
             <div class="col col-lg-4 col-md-6 col-12">
@@ -14,41 +18,38 @@
             <div class="col col-lg-5 col-md-6 col-12">
                 <div class="footer__item p-32 pararaph-straight">
                     <h3 class="mb-8">Thông tin</h3>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga fugiat expedita, voluptas hic omnis atque. Consequatur dolor esse, ullam quo omnis, explicabo distinctio eligendi neque totam atque aliquid velit incidunt.
+                    <p>@if($infoShop){{$infoShop->short_description}}@endif</p>
+                    <p>Open: @if($infoShop){{$infoShop->open_at}}@endif</p>
+                    <hr>
+                    <p>Địa chỉ: @if($infoShop){{$infoShop->address}}@endif</p>
+                    <p>Điện thoại: @if($infoShop){{$infoShop->phone}}@endif</p>
+                    <p>Zalo: @if($infoShop){{$infoShop->zalo}}@endif</p>
                 </div>
 
             </div>
             <div class="col col-lg-3 col-md-12 col-12">
                 <div class="footer__item p-32 grid">
                     <div class="row">
+
+                        @if(! is_null($productsFeature) && sizeof($productsFeature) > 6)
+                        @for($i = 0; $i < 6; $i++)
                         <div class="col-lg-4 col-md-2 col-4">
-                            <img class="p-4" src="/img/product-1.jpg" alt="">
+                            <a href="" class="m-2">
+                                <img src="{{$productsFeature[$i]->image}}" alt="{{$productsFeature[$i]->name}}">
+                            </a>
                         </div>
-                        <div class="col-lg-4 col-md-2 col-4">
-                            <img class="p-4" src="/img/product-1.jpg" alt="">
-                        </div>
-                        <div class="col-lg-4 col-md-2 col-4">
-                            <img class="p-4" src="/img/product-1.jpg" alt="">
-                        </div>
-                        <div class="col-lg-4 col-md-2 col-4">
-                            <img class="p-4" src="/img/product-1.jpg" alt="">
-                        </div>
-                        <div class="col-lg-4 col-md-2 col-4">
-                            <img class="p-4" src="/img/product-1.jpg" alt="">
-                        </div>
-                        <div class="col-lg-4 col-md-2 col-4">
-                            <img class="p-4" src="/img/product-1.jpg" alt="">
-                        </div>
+                        @endfor
+                        @endif
                     </div>
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="footer__social p-4">
                                 <i class="fab fa-facebook-square"></i>
-                                https://www.facebook.com
+                                @if($infoShop){{$infoShop->social}}@endif
                             </div>
                             <div class="footer__social p-4">
                                 <i class="fas fa-envelope"></i>
-                                hoangminh@gmail.com
+                                @if($infoShop){{$infoShop->email_contact}}@endif
                             </div>
                         </div>
                     </div>

@@ -40,8 +40,8 @@
                         <th>Sale</th>
                         <th>Nổi bật</th>
                         <th style="width: 170px">Trạng Thái</th>
-                        <th style="width: 170px">Xoá</th>
-                        <th style="width: 200px">Cập Nhật</th>
+                        <th style="width: 170px">Xoá tạm</th>
+                        <th>Cập Nhật</th>
                         <th style="width: 50px">Sửa</th>
                         <th style="width: 50px">Xóa</th>
                     </tr>

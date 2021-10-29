@@ -1,9 +1,8 @@
 a {
   text-decoration: none;
 }
-/* format number */
-.display_price, .display_price_text {
-    color: gray;
-    font-style: italic;
-    width: 100%;
+
+.display_price {
+  color: red;
 }
+

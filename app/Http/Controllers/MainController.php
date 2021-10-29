@@ -37,7 +37,8 @@ class MainController extends Controller
             'page' => $this->modelPage->all(),
             'top' => $this->top->first(),
             'category' => $this->category->all(),
-            'productsFeature' => $this->products->where('feature', '=', '1')->limit(4)->get()
+            'productsFeature' => $this->products->where('feature', '=', '1')->get(),
+            'productsNew' => $this->products->where('active', '=', '1')->orderByDesc('updated_at')->limit(8)->get()
         ]);
     }
 }

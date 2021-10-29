@@ -23,7 +23,9 @@ class Setting extends Model
         'delete_image',
         'maintenance',
         'email',
-        'password_app'
+        'password_app',
+        'social',
+        'email_contact'
     ];
 }
 

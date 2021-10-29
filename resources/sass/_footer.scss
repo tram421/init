@@ -22,4 +22,13 @@ footer {
             color: $text-color-highlight;
         }
     }
+    .top {
+        position: fixed;
+        bottom: 10%;
+        right: 5%;
+        background-color: $background-color-press;
+        color: white;
+        padding: 10px;
+        border-radius: 15%;
+    }
 }
